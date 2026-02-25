@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velora Luxe | Luxury Clothing</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background: 
+        radial-gradient(circle at 20% 10%, rgba(212,175,55,0.15), transparent 40%),
+        radial-gradient(circle at 80% 90%, rgba(212,175,55,0.12), transparent 40%),
+        linear-gradient(135deg, #0b0b0b 0%, #111 40%, #000 100%);
+      background-blend-mode: screen, screen, normal;
+      color: #ffffff;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 1px solid #c9a84f33;
+    }
+    header img {
+      max-width: 220px;
+      margin-bottom: 15px;
+    }
+    h1 {
+      letter-spacing: 4px;
+      margin: 10px 0 0;
+      font-weight: normal;
+    }
+    nav {
+      text-align: center;
+      padding: 15px;
+      border-bottom: 1px solid #c9a84f22;
+    }
+    nav a {
+      color: #f5e6c8;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+    nav a:hover {
+      color: #d4af37;
+    }
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 120px 20px;
+      background-image: url("https://images.unsplash.com/photo-1520975922284-9b1b3b2b7c5f?q=80&w=1600&auto=format&fit=crop");
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-overlay {
+      background: rgba(0,0,0,0.65);
+      padding: 60px 20px;
+      border: 1px solid rgba(212,175,55,0.35);
+      display: inline-block;
+    }
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      color: #c9a84f;
+      letter-spacing: 2px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      padding: 50px;
+    }
+    .card {
+      background: #111;
+      border: 1px solid #c9a84f22;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #d4af37;
+    }
+    .card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 15px 0 5px;
+    }
+    .price {
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid #c9a84f22;
+      font-size: 14px;
+    }
+    .contact {
+      color: #d4af37;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Replace logo path if needed -->
+    <img src="/mnt/data/a_luxurious_logo_design_for_velora_luxe_features.png" alt="Velora Luxe Logo" />
+    <h1>VELORA LUXE</h1>
+  </header>
+
+  <nav>
+    <a href="#">HOME</a>
+    <a href="#">COLLECTION</a>
+    <a href="#">HOODIES</a>
+    <a href="#">T-SHIRTS</a>
+    <a href="#">CONTACT</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <h2>Luxury Streetwear</h2>
+      <p>PREMIUM • ELEGANT • EXCLUSIVE</p>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x300" />
+      <h3>Solo Leveling Hoodie</h3>
+      <div class="price">₹599</div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x300" />
+      <h3>Anime Style Hoodie</h3>
+      <div class="price">₹499</div>
+    </div>
+  </section>
+
+  <footer>
+    <div>© 2026 Velora Luxe</div>
+    <div class="contact">Contact: 7009073972</div>
+  </footer>
+  <!-- Opening Animation -->
+  
+
+  <style>
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      animation: fadeOut 1.2s ease forwards;
+      animation-delay: 2.4s;
+    }
+    .lux-logo {
+      font-size: 42px;
+      letter-spacing: 6px;
+      color: #d4af37;
+      text-transform: uppercase;
+      border: 2px solid #d4af37;
+      padding: 18px 34px;
+      background: linear-gradient(90deg,#d4af37,#fff,#d4af37);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0;
+      transform: scale(0.85);
+      animation: logoIn 1.6s ease forwards, shine 2.5s linear infinite;
+    }
+    @keyframes logoIn { to { opacity: 1; transform: scale(1);} }
+    @keyframes fadeOut { to { opacity: 0; visibility: hidden;} }
+    @keyframes shine {
+      0% { background-position: -200px; }
+      100% { background-position: 200px; }
+    }
+  </style>
+
+  <div id="loader">
+    <div class="lux-logo">VELORA LUXE</div>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      setTimeout(() => loader.remove(), 3500);
+    });
+  </script>
+</body>
+</html>
